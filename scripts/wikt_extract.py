@@ -125,8 +125,10 @@ if __name__ == "__main__":
         for line in f:
              words_to_fetch.append(line.split('\t')[0])
 
-    for word in words_to_fetch[:5000]:
+    for n, word in enumerate(words_to_fetch[:5000]):
+        print(n, word)
         wkt.fetch_word(word, return_follow_link=False)
+
     # words_to_fetch = ['manger']
     # words_fetched = []
     # while len(words_fetched)<101:
